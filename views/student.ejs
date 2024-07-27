@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/student.css">
+</head>
+<body>
+    <form id="form" action="/" name="myForm" onsubmit="return validateForm()" method="post">
+    <div class="container">
+        <div class="box">
+            <div class="box1">
+                <h2 id="heading">
+                    STUDENT DETAILS
+                </h2>
+            <span>
+                <div class="ind"><b><i>NAME OF THE STUDENT</i></b></div>
+                <span>:</span>
+                <input type="text" id="studentname" name="stud" required><b><span id="formerror1"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>USN</i></b></div>
+                <span>:</span>
+                <input type="text" id="usn" name="usn" required><b><span id="formerror2"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>DATE OF BIRTH</i></b></div>
+                <span>:</span>
+                <input type="date" id="dob" name="dob" required>
+            </span>
+            <span>
+                <div class="ind"><b><i>SELECT YOUR DEPARTMENT</i></b></div>
+                <span>:</span>
+                <select id="department" name="departmentsel">
+                <option value="SELECT">SELECT</option>
+                <option value="Information Science and Engineering">Information Science and Engineering</option>
+                <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Biotechnolgy">Biotechnology</option>
+                <option value="Aerospace Engineering">Aerospace Engineering</option>
+                </select>
+            </span>
+            <span>
+                <div class="ind"><b><i>NAME OF THE SCHOOL</i></b></div>
+                <span>:</span>
+                <input type="text" id="schoolname" name="name" required><b><span id="formerror3"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>EMAIL_ID</i></b></div>
+                <span>:</span>
+                <input type="text" id="emailid" name="email_id" required><b><span id="formerroremailid"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>PERCENTAGE IN 1OTH</i></b></div>
+                <span>:</span>
+                <input type="number" id="10percentage" name="10" min="1" max="100" step="0.01" required><span id="formerror10th"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>YEAR OF PASSOUT</i></b></div>
+                <span>:</span>
+                <input type="number" id="10passout" min="2017" max="2020" required><span id="formerror10thyear"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>NAME OF THE PU COLLEGE</i></b></div>
+                <span>:</span>
+                <input type="text" id="collegename" name="clgname" required><b><span id="formerror4"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>PERCENTAGE IN 12TH</i></b></div>
+                <span>:</span>
+                <input type="number" id="12percentage" name="12" min="1" max="100" step="0.01" required><span id="formerror12th"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>YEAR OF PASSOUT</i></b></div>
+                <span>:</span>
+                <input type="number" id="12passout" min="2019" max="2022" required><span id="formerror12thyear"></span></b>
+            </span>
+            
+            <span>
+                <div class="ind" class="ind"><b><i>CGPA</i></b></div>
+                <span>:</span>
+                <input type="number" id="cgpa" min="0" max="10" step="0.01" required style="margin-right: 8px;" readonly>
+                <input type="file" name="file" id="marksSheet" accept="image/*" style="margin-right: 8px;">
+                <button onclick="uploadMarksSheet()">Upload</button>
+            </span>
+            <span>
+                <div class="ind"><b><i>BACKLOGS</i></b></div>
+                <span>:</span>
+                <input type="number" id="backlogs" min="0" required><span id="formerrorbacklogs"></span></b>
+            </span>
+            <span>
+                <div class="ind"><b><i>PROGRAMMING LANGUAGES</i></b></div>
+                <span>:</span>
+                <input type="text" id="plang" required>
+            </span>
+            <span>
+                <div class="ind"><b><i>SOFTWARE SKILLS</i></b></div>
+                <span>:</span>
+                <input type="text" id="sskill" required>
+            </span>
+            <span>
+                <div class="ind"><b><i>HARDWARE SKILLS</i></b></div>
+                <span>:</span>
+                <input type="text" id="hskill" required>
+            </span>
+           <button id="studentsub">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="/javascripts/student.js"></script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>  
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div class="header">
+        <h1>STUDENT PROFILE</h1>
+        <button id="logout">logout</button>
+    </div>
+    <div class="spacer"></div>
+    <form>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Details          *can only change cgpa and backlog</th>
+            </tr>
+            <tr>
+                <td>NAME OF THE STUDENT</td>
+                <td><div type="text" name="student_name" id="1"></div></td>
+            </tr>
+            <tr>
+                <td>USN</td>
+                <td><div type="text" name="usn" id="2"></div></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH (dd-mm-yyyy)</td>
+                <td><div type="text" name="dob" id="3"></div></td>
+            </tr>
+            <tr>
+                <td>SELECT YOUR DEPARTMENT</td>
+                <td>
+                    <div type="text" name="dob" id="4"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>NAME OF THE SCHOOL</td>
+                <td><div type="text" name="school_name" id="5"></div></td>
+            </tr>
+            <tr>
+                <td>EMAIL ID</td>
+                <td><div type="text" name="email_id" id="25"></div></td>
+            </tr>
+            <tr>
+                <td>PERCENTAGE IN 10TH</td>
+                <td><div type="text" name="percentage_10th" id="6"></div></td>
+            </tr>
+            <tr>
+                <td>YEAR OF PASSOUT (10TH)</td>
+                <td><div type="text" name="year_passout_10th" id="7"></div></td>
+            </tr>
+            <tr>
+                <td>NAME OF THE PU COLLEGE</td>
+                <td><div type="text" name="pu_college_name" id="8"></div></td>
+            </tr>
+            <tr>
+                <td>PERCENTAGE IN 12TH</td>
+                <td><div type="text" name="percentage_12th" id="9"></div></td>
+            </tr>
+            <tr>
+                <td>YEAR OF PASSOUT (12TH)</td>
+                <td><div type="text" name="year_passout_12th" id="10"></div></td>
+            </tr>
+            <tr>
+                <td>CGPA</td>
+                <td><textarea type="text" name="cgpa" id="11" readonly></textarea></td>
+            </tr>
+            <tr>
+                <td>BACKLOGS</td>
+                <td><textarea type="text" name="backlogs" id="12"></textarea></td>
+            </tr>
+            <tr>
+                <td>PROGRAMMING LANGUAGES</td>
+                <td><div type="text" name="programming_languages" id="13"></div></td>
+            </tr>
+            <tr>
+                <td>SOFTWARE SKILLS</td>
+                <td><div type="text" name="software_skills" id="14"></div></td>
+            </tr>
+            <tr>
+                <td>HARDWARE SKILLS</td>
+                <td><div type="text" name="hardware_skills" id="15"></div></td>
+            </tr>
+            <tr>
+                <td>PROJECT NAME-1</td>
+                <td><div type="text" name="project_name_1" id="16"></div></td>
+            </tr>
+            <tr>
+                <td>ORGANIZATION</td>
+                <td><div type="text" name="organization_1" id="17"></div></td>
+            </tr>
+            <tr>
+                <td>DESCRIPTION</td>
+                <td><div name="description_1" rows="4" cols="50" id="18"></div></td>
+            </tr>
+            <tr>
+                <td>PROJECT NAME-2</td>
+                <td><div type="text" name="project_name_2" id="19"></div></td>
+            </tr>
+            <tr>
+                <td>ORGANIZATION</td>
+                <td><div type="text" name="organization_2" id="20"></div></td>
+            </tr>
+            <tr>
+                <td>DESCRIPTION</td>
+                <td><div name="description_2" rows="4" cols="50" id="21"></div></td>
+            </tr>
+            <tr>
+                <td>PROJECT NAME-3</td>
+                <td><div type="text" name="project_name_3" id="22"></div></td>
+            </tr>
+            <tr>
+                <td>ORGANIZATION</td>
+                <td><div type="text" name="organization_3" id="23"></div></td>
+            </tr>
+            <tr>
+                <td>DESCRIPTION</td>
+                <td><div name="description_3" rows="4" cols="50" id="24"></div></td>
+            </tr>
+          
+        <div class="button-line">
+            <input type="file" name="file" id="marksSheet" accept="image/*" onchange="updateFileName(this)" style="margin-right: 8px; width:90px; height:50px;">
+            <!-- Custom file input label    onchange="updateFileName(this)"-->
+            <button onclick="uploadMarksSheet()">Upload</button>
+            <button  id="ucgpa">Update CGPA changes</button>
+            <button  id="uback">Update Backlogs changes</button>
+            <button id="getresume">Download Resume</button>
+        </div>
+    </form>
+<script src="/javascripts/profile.js"></script>
+</body>
+</html>

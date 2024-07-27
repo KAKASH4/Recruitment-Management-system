@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.box1,
+.box2 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    width: 45%;
+    animation: fadeInUp 1s ease forwards;
+}
+
+h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project,
+.internship,
+.achievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.projectname,
+.achievements,
+.internship {
+    font-size: 16px;
+    color: #555;
+    width: 30%;
+    display: flex;
+    align-items: center; /* Align items in column */
+}
+
+.projectname span,
+.achievements span,
+.internship span {
+    margin-right: 5px;
+}
+
+.input-container {
+    width: 65%;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+} */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px dashed #4CAF50; /* Add dashed border */
+    border-radius: 6px;
+    padding: 15px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease; /* Added transition for smooth scaling */
+    margin: 15px; /* Increased margin */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+    transform: scale(1.05); /* Scale the button to 105% size on hover */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">  
+          <a href="index.ejs"><img src="images/logo2.png" alt=""  class="logo"></a>
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li>
+              <button class="btn" id="btnn">Login</button>
+            </li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>RECRUITMENT<br />MANAGEMENT SYSTEM</h2>
+            <p>The Recruitment Management System (RMS) serves as a comprehensive solution designed to streamline and enhance the administrative processes associated with talent acquisition. This Database Management Project aims to revolutionize the traditional methods of recruitment by integrating cutting-edge technology to automate and optimize various tasks.</p>
+            <!-- <div class="buttons">
+              <button class="btn">Read More</button>
+              <button class="btn">Contact Us</button>
+            </div> -->
+          </div>
+          <div class="column">
+            <img src="images/hero.png" alt="heroImg" class="hero_img" />
+          </div>
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+    <script src="/javascripts/home.js"></script>
+  </body>
+</html>

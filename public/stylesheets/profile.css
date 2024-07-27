@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    margin: 0;
+}
+
+.spacer {
+    height: 20px; /* Adjust height as needed */
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin: 0;
+    padding-left: 630px;
+}
+
+#logout {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #45a049;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease forwards;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+input[type="text"], input[type="date"], input[type="email"], select, textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 6px 0 16px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="email"]:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #4CAF50;
+}
+
+.button-line {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-line input[type="file"] {
+    margin-right: 8px;
+}
+
+.button-line button {
+    margin: 0 10px;
+    margin-bottom: 10px; /* Add margin bottom to separate buttons */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.button-line button:hover {
+    background-color: #45a049;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style the custom file input */
+.custom-file-input {
+    background-color: #ffffff; /* Change background color */
+    color: #4CAF50; /* Change text color */
+    border: 2px solid #4CAF50; /* Add border */
+}
+
+/* Style the label for the custom file input */
+.custom-file-label {
+    margin-right: 8px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+/* Style the label when hovering */
+.custom-file-label:hover {
+    background-color: #45a049;
+}
+
+.button-line button:nth-of-type(1) {
+    background-color: #4CAF50; /* Change background color */
+    color: white; /* Change text color */
+    border: 2px solid #4CAF50; /* Add border */
+}
+
+.button-line button:nth-of-type(1):hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px dashed #4CAF50; /* Add dashed border */
+    border-radius: 6px;
+    padding: 15px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease; /* Added transition for smooth scaling */
+    margin: 15px; /* Increased margin */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+    transform: scale(1.05); /* Scale the button to 105% size on hover */
+}

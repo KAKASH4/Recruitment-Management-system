@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/stylesheets/plst.css">
+</head>
+<body>
+    <h1>Student Details</h1>
+    <div class="filter-form">
+        <label for="cgpa">Minimum CGPA:</label>
+        <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" placeholder="Enter CGPA">
+        <label for="backlogs">Maximum Backlogs:</label>
+        <input type="number" id="backlogs" name="backlogs" min="0" placeholder="Enter Backlogs">
+        <button onclick="applyFilter()">Apply</button>
+        <button id="logout">logout</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student USN</th>
+                <th>CGPA</th>
+                <th>Departments</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            <% studentDetails.forEach(function(student) { %>
+                <tr>
+                    <td><%= student.name %></td>
+                    <td><%= student.usn %></td>
+                    <td><%= student.cgpa %></td>
+                    <td><%= student.backlogs %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <!-- <p>Scroll down to view more student details...</p> -->
+    <script src="/javascripts/plst.js"></script>
+    
+</body>
+</html>

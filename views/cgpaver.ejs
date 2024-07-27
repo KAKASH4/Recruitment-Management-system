@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Verification</title>
+    <link rel="stylesheet" href="/stylesheets/cgpaver.css">
+</head>
+<body>
+    <div class="header">
+        <span><h1>CGPA Verification</h1></span>
+        <span><button id="logout">Logout</button></span>
+    </div>
+    <table id="cgpaTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>USN</th>
+                <th>CGPA</th>
+                <th>Preview</th>
+                <th>Verified</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(student => { %>
+                <tr>
+                    <td><%= student.name %></td>
+                    <td><%= student.USN %></td>
+                    <td><%= student.CGPA %></td>
+                    <% let cgpaImagePath = ''; %>
+                    <% if (studentverify) { %>
+                        <% let verifiedStudent = studentverify.find(studentData => studentData.usn === student.USN); %>
+                        <% if (verifiedStudent && verifiedStudent.pathforcgpa) { %>
+                            <% cgpaImagePath = verifiedStudent.pathforcgpa; %>
+                        <% } %>
+                    <% } %>
+                    <td><img src="http://localhost:5000/uploads/<%= cgpaImagePath %>" alt="CGPA File Preview" width="100"></td>
+                    <td>
+                    <td>
+                        <input type="checkbox" class="verificationCheckbox" data-student-id="<%= student.USN %>" <% 
+                        let verifiedStudent = studentverify.find(studentData => studentData.usn === student.USN);
+                        if (verifiedStudent && verifiedStudent.verified) { %>checked<% } %>>
+                                        </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="/javascripts/cgpaver.js"></script>
+</body>
+</html>
